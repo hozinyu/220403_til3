@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      width: 100vh;
+    }
+
+    div {
+      background-color: black;
+      margin: 50px 250px;
+      width: 200px;
+      height: 200px;
+    }
+    .trans {
+      transition: 1s ease-in-out;
+    }
+    .trans:hover {
+      background-color: aqua;
+    }
+    @keyframes colorChange {
+      25% {
+        background-color: tomato;
+      }
+      50% {
+        background-color: orange;
+      }
+      75% {
+        background-color: pink;
+      }
+      100% {
+        background-color: olive;
+      }
+    }
+    .anim {
+      animation: colorChange 3s ease-in-out infinite;
+    }
+  </style>
+  <body>
+    <div class="trans">transition</div>
+    <p>
+      transition은 trigger가 있어야 실행 (like:hover) <br />
+      마우스를 떼기 전까지는 마지막 상태유지 = 처음상태로 안돌아감
+    </p>
+    <div class="anim">animation</div>
+    <p>
+      animation은 trigger없어도 자동 실행 <br />
+      지 알아서 바뀌고 처음상태로 돌아감
+    </p>
+  </body>
+</html>
